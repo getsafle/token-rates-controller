@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://sshubhamagg@bitbucket.org/getsafle/token-rates-controller.git"
+    "url": "git+https://github.com/getsafle/token-rates-controller"
   },
   "author": "Shubham Singhal",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/getsafle/token-rates-controller#readme",
+  "homepage": "https://github.com/getsafle/token-rates-controller",
   "dependencies": {
     "axios": "^0.21.1"
   }
