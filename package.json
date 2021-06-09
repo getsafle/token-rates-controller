@@ -1,7 +1,7 @@
 {
   "name": "@getsafle/token-rates-controller",
-  "version": "1.0.0",
-  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "version": "1.0.1",
+  "description": "Getsafle Token rates controller",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
