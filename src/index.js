@@ -5,17 +5,32 @@ class TokenRatesController {
 
   async getTokenRates({ contractAddresses, currencies }) {
 
-    if (!currencies.every(element => SUPPORTED_CURRENCIES.includes(element))) {
-      return INVALID_CURRENCY_ERROR;
-    }
+    let invalidCurrencies = [];
+    let validCurrencies = [];
+
+    currencies.forEach((currency) => {
+      if (!SUPPORTED_CURRENCIES.includes(currency)) {
+        invalidCurrencies.push(currency);
+      }
+      else
+        validCurrencies.push(currency)
+    });
 
     const tokens = contractAddresses.join(',');
-    currencies = currencies.join(',');
-    const query = `contract_addresses=${tokens}&vs_currencies=${currencies}`;
+    validCurrencies = validCurrencies.join(',');
+    const query = `contract_addresses=${tokens}&vs_currencies=${validCurrencies}`;
 
     let url = `${COINGEKO_BASE_URL}?${query}`;
 
     const { response } = await Helper.getRequest({ url });
+
+
+    if (invalidCurrencies.length) {
+      return {
+        ...response,
+        'Invalid Currencies': invalidCurrencies,
+      }
+    }
 
     return response;
   }
