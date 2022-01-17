@@ -1,4 +1,5 @@
-const { COINGEKO_BASE_URL } = require('../constants/index')
+const { COINGECKO_BASE_URL } = require('../constants/index');
+const { INVALID_CHAIN_SELECTED } = require('../constants/responses');
 const axios= require('axios');
 
 async function getRequest({ url }) {
@@ -18,12 +19,12 @@ async function getRequest({ url }) {
 async function getBaseURL(chain){
   switch (chain) {
     case 'ethereum': {
-       let url =  `${COINGEKO_BASE_URL}/ethereum`;
+       let url =  `${COINGECKO_BASE_URL}/ethereum`;
 
         return { url };
     }
     case 'polygon':{
-      let url =  `${COINGEKO_BASE_URL}/polygon-pos`;
+      let url =  `${COINGECKO_BASE_URL}/polygon-pos`;
 
       return { url };
     }
