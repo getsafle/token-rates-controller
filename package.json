@@ -1,6 +1,6 @@
 {
   "name": "@getsafle/token-rates-controller",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Getsafle Token rates controller",
   "main": "src/index.js",
   "scripts": {
@@ -10,7 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/getsafle/token-rates-controller"
   },
-  "author": "Shubham Singhal",
+  "author": "safle",
+  "contributors": [
+    {
+      "name": "Shubham",
+      "email": "shubham@getsafle.com"
+    }
+  ],
   "license": "ISC",
   "homepage": "https://github.com/getsafle/token-rates-controller",
   "dependencies": {

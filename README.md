@@ -27,7 +27,8 @@ Initialise the class using,
 
 Get token conversion rates
 
-`const tokenRates= await tokenRatesController.getTokenRates({ contractAddresses, currencies })`
+`const tokenRates= await tokenRatesController.getTokenRates({ contractAddresses, currencies, chain })`
 
 * `contractAddresses` - contract address of tokens - type : array 
 * `currencies` - Base currencies selected by user - type : array
+* `chain` - name of blockchain - type : string [ethereum, polygon supported for now]

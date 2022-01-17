@@ -1,3 +1,3 @@
 module.exports = {
-    INVALID_CURRENCY_ERROR: 'invalid currency selected',
+    INVALID_CHAIN_SELECTED : 'invalid chain selected'
 };
