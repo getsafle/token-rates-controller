@@ -31,4 +31,4 @@ Get token conversion rates
 
 * `contractAddresses` - contract address of tokens - type : array 
 * `currencies` - Base currencies selected by user - type : array
-* `chain` - name of blockchain - type : string [ethereum, ploygon supported for now]
+* `chain` - name of blockchain - type : string [ethereum, polygon supported for now]
