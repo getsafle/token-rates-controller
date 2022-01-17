@@ -1,9 +1,9 @@
 const Helper = require('./utils/helper');
-const { SUPPORTED_CURRENCIES, COINGEKO_BASE_URL } = require('./constants');
+const { SUPPORTED_CURRENCIES } = require('./constants');
 const { INVALID_CURRENCY_ERROR } = require('./constants/responses')
 class TokenRatesController {
 
-  async getTokenRates({ contractAddresses, currencies }) {
+  async getTokenRates({ contractAddresses, currencies,chain }) {
 
     let invalidCurrencies = [];
     let validCurrencies = [];
@@ -20,7 +20,9 @@ class TokenRatesController {
     validCurrencies = validCurrencies.join(',');
     const query = `contract_addresses=${tokens}&vs_currencies=${validCurrencies}`;
 
-    let url = `${COINGEKO_BASE_URL}?${query}`;
+
+    const { url: COINGEKO_URL } = await Helper.getBaseURL(chain); 
+    let url = `${COINGEKO_URL}?${query}`;
 
     const { response } = await Helper.getRequest({ url });
 

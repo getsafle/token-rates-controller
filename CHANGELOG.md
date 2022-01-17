@@ -6,3 +6,7 @@
 ### 1.0.1 (2021-06-09)
 
 * Added support for multiple base currencies
+
+### 1.0.2 (2022-01-17)
+
+* Updated controller to fetch rates for tokens on polygon chain
