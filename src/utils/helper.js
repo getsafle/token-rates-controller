@@ -28,6 +28,11 @@ async function getBaseURL(chain){
 
       return { url };
     }
+    case 'bsc':{
+      let url =  `${COINGECKO_BASE_URL}/binance-smart-chain`;
+
+      return { url };
+    }
     default: {
         return { error: INVALID_CHAIN_SELECTED };
     }
