@@ -14,3 +14,7 @@
 ### 1.0.3 (2022-03-29)
 
 * Added support for binance smart chain
+
+### 1.0.4 (2022-05-11)
+
+* Added support for avalanche chain

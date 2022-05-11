@@ -33,6 +33,11 @@ async function getBaseURL(chain){
 
       return { url };
     }
+    case 'avalanche':{
+      let url =  `${COINGECKO_BASE_URL}/avalanche`;
+
+      return { url };
+    }
     default: {
         return { error: INVALID_CHAIN_SELECTED };
     }
