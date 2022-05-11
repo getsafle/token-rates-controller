@@ -18,3 +18,7 @@
 ### 1.0.4 (2022-05-11)
 
 * Added support for avalanche chain
+
+### 1.0.4 (2022-05-11)
+
+* Added support for harmony chain

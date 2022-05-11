@@ -38,6 +38,11 @@ async function getBaseURL(chain){
 
       return { url };
     }
+    case 'harmony':{
+      let url =  `${COINGECKO_BASE_URL}/harmony-shard-0`;
+
+      return { url };
+    }
     default: {
         return { error: INVALID_CHAIN_SELECTED };
     }
