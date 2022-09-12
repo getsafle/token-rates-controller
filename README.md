@@ -1,34 +1,47 @@
-# **Safle Token Rates Controller**
+# Safle Token Rates Controller
 
-Safle Token Rates Controller SDK
+Token rates controller returns the rates of tokens for multiple currencies across multiple tokens on multiple chains.
 
+## Installation
 
-## **Installation and Usage**
+To install this SDK,
 
-> Installation
+```sh
+npm install --save @getsafle/token-rates-controller
+```
 
-Install the package by running the command,
+## Initialization
 
-`npm install @getsafle/token-rates-controller`
+Initialize the constructor,
 
-Import the package into your project using,
+```js
+const safleTokenRatesController = require('@getsafle/token-rates-controller');
 
-`const safleTokenRatesController = require('@getsafle/token-rates-controller');`
+const tokenRatesController = new safleTokenRatesController.TokenRatesController();
+```
 
-## **Token Rates Controller**
+<br>
 
-> Initialising
+> Get token conversion rates
 
-Initialise the class using,
+<br>
 
-`const tokenRatesController = new safleTokenRatesController.TokenRatesController();` 
+This function takes in an array of token contract addresses and an array of currencies and returns the rates accordingly.
 
-> Methods
-
-Get token conversion rates
-
-`const tokenRates= await tokenRatesController.getTokenRates({ contractAddresses, currencies, chain })`
+```js
+const tokenRates= await tokenRatesController.getTokenRates({ contractAddresses, currencies, chain })
+```
 
 * `contractAddresses` - contract address of tokens - type : array 
 * `currencies` - Base currencies selected by user - type : array
 * `chain` - name of blockchain - type : string [ethereum, polygon supported for now]
+
+<br>
+
+> Supported Chains
+
+* `ethereum`
+* `polygon`
+* `bsc`
+* `avalanche`
+* `harmony`
